@@ -1,0 +1,17 @@
+// About
+
+.about {
+  padding: 20px 0;
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $circleBold;
+  }
+
+  &__text {
+
+    p + p {
+      margin-top: 10px;
+    }
+  }
+}

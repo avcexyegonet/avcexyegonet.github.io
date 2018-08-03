@@ -1,0 +1,19 @@
+// Global
+@import "global/_variable";
+@import "global/_global";
+@import "global/_mixin";
+@import "global/_fonts";
+@import "global/_override";
+
+// Common
+@import "common/i-svg";
+
+// Blocks
+@import "blocks/main";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/content";
+@import "blocks/carousel";
+@import "blocks/about";
+@import "blocks/footer";
+@import "blocks/social";
