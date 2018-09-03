@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../libs/flickity.min.css" media="screen">
     <link rel="stylesheet" href="../libs/slick-slider/slick-theme.css">
     <link rel="stylesheet" href="../libs/slick-slider/slick.css">
+    <link rel="stylesheet" href="../libs/remodal/remodal.css">
+    <link rel="stylesheet" href="../libs/remodal/remodal-default-theme.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Inna Shestopalova</title>
 </head>
@@ -106,42 +108,42 @@
                 <div class="block__content">
                     <div class="card-list js-card-list">
                         <div class="card">
-                            <img src="../img/pictures/Pic3.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic3.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic6.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic6.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic8.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic8.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic9.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic9.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic11.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic11.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic12.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic12.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic13.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic13.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/pictures/Pic17.jpg" class="card__img" alt="" />
+                            <img src="../img/pictures/Pic17.jpg" class="card__img js-card-img" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">50&nbsp;&euro;</p>
                         </div>
@@ -159,27 +161,27 @@
                 <div class="block__content">
                     <div class="card-list js-card-list">
                         <div class="card">
-                            <img src="../img/accessories/Ac1.jpg" class="card__img _acc" alt="" />
+                            <img src="../img/accessories/Ac1.jpg" class="card__img js-card-img _acc" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">75&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/accessories/Ac2.jpg" class="card__img _acc" alt="" />
+                            <img src="../img/accessories/Ac2.jpg" class="card__img js-card-img _acc" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">75&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/accessories/Ac3.jpg" class="card__img _acc" alt="" />
+                            <img src="../img/accessories/Ac3.jpg" class="card__img js-card-img _acc" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">75&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/accessories/Ac4.jpg" class="card__img _acc" alt="" />
+                            <img src="../img/accessories/Ac4.jpg" class="card__img js-card-img _acc" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">75&nbsp;&euro;</p>
                         </div>
                         <div class="card">
-                            <img src="../img/accessories/Ac5.jpg" class="card__img _acc" alt="" />
+                            <img src="../img/accessories/Ac5.jpg" class="card__img js-card-img _acc" alt="" />
                             <p class="card__title">Name</p>
                             <p class="card__price">75&nbsp;&euro;</p>
                         </div>
@@ -312,11 +314,23 @@
 </footer>
 <!-- /Footer -->
 
+<!-- Modal -->
+<div data-remodal-options="hashTracking: false" class="remodal modal js-modal-card">
+    <a data-remodal-action="close" class="modal__close"></a>
+    <div class="modal__content">
+        <div class="modal__img">
+            <img class="js-modal-card-img" src="" alt="" />
+        </div>
+    </div>
+</div>
+<!-- //Modal -->
+
 <!-- Resources -->
 <script src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/jquery.scrollTo.min.js"></script>
 <script src="../libs/flickity.pkgd.min.js"></script>
 <script src="../libs/slick-slider/slick.min.1.8.1.js"></script>
+<script src="../libs/remodal/remodal.min.1.1.1.js"></script>
 <script src="../js/main.js"></script>
 <!-- /Resources -->
 </body>
