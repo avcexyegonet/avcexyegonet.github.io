@@ -87,8 +87,6 @@ class PrintText {
         let paramsString = url.substring(url.lastIndexOf('?') + 1);
         let searchParams = new URLSearchParams(paramsString);
 
-        alert(searchParams)
-
         // если язык английский
         if (searchParams.has("en")) {
             this.langIsEng = true;
@@ -139,14 +137,13 @@ class PrintText {
         let opl = document.createElement('div');
         opl.innerHTML = '1234';
         this.textWrap.appendChild(opl);
-
-        alert(this.titleTr)
-        alert(this.messageTr)
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     let text = new PrintText();
     text.getText();
-    console.log(text)
+    console.log(text);
+
+    alert('opl')
 })
