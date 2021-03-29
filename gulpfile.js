@@ -8,6 +8,7 @@ const cssmin = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
+const babel = require('gulp-babel');
 
 const path = {
     build: {
@@ -59,6 +60,9 @@ exports.style = style;
 const scripts = () => {
     return gulp.src(path.src.js)
         .pipe(fileinclude('//'))
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+        }))
         .pipe(terser({
             toplevel: true
         }).on('error', function (e) { console.log(e.message) }))

@@ -133,17 +133,10 @@ class PrintText {
             message.innerHTML = this.messageTr;
             this.textWrap.appendChild(message);
         }
-
-        let opl = document.createElement('div');
-        opl.innerHTML = '1234';
-        this.textWrap.appendChild(opl);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     let text = new PrintText();
     text.getText();
-    console.log(text);
-
-    alert('opl')
 })
