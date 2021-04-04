@@ -23,5 +23,6 @@
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^2.0.1"
-  }
+  },
+  "dependencies": {}
 }
