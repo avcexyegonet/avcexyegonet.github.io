@@ -1,5 +1,6 @@
-@use 'abstract';
+@use 'abstract' as *;
 @use 'form';
+@use 'content';
 
 * {
     margin: 0;
@@ -9,85 +10,25 @@
 
 body {
     height: 100vh;
+    min-width: 320px;
     font-family: "JB-Reg";
 
     &.theme-grey {
-        color: #7d7d7d;
+        color: $color-grey;
 
         ::selection {
-            background: #7d7d7d;
-            color: #e7e7e7;
+            background: $color-grey;
+            color: $color-grey-light;
         }
     }
 
     &.theme-deep-blue {
-        color: #fff;
+        color: $color-white;
         user-select: none;
 
         ::selection {
-            background: #0a2433;
-            color: #fff;
-        }
-    }
-}
-
-.g-content {
-    position: relative;
-    height: 100vh;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    text-align: center;
-    background-color: #000;
-
-    &__picture {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: url(images/2.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: blur(15px);
-        opacity: 0;
-
-        &.fade-in-blur {
-            animation: fadeInBlur ease 4s forwards;
-        }
-
-        @keyframes fadeInBlur {
-            0% {
-                filter: blur(15px);
-                opacity: 0;
-            }
-            100% {
-                filter: blur(0);
-                opacity: 1;
-            }
-        }
-    }
-
-    &__text {
-        max-width: 600px;
-        z-index: 5;
-    
-        &.fade-out-blur {
-            animation: fadeOutBlur ease 2s forwards;
-        }
-    
-        @keyframes fadeOutBlur {
-            0% {
-                filter: blur(0);
-                opacity: 1;
-            }
-            100% {
-                filter: blur(15px);
-                opacity: 0;
-            }
+            background: $color-deep-blue;
+            color: $color-white;
         }
     }
 }
@@ -99,13 +40,5 @@ h1 {
 @media all and(max-width: 767px) {
     h1 {
         font-size: 32px;
-    }
-
-    .g-content {
-        font-size: 20px;
-        
-        &__pictur {
-            background-position: top center;
-        }
     }
 }

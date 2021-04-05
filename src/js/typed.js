@@ -7,6 +7,17 @@ const text = [
     'Скорее всего ты...'
 ]
 
+function addSignature() {
+    let sign = document.createElement('div');
+    sign.classList.add('g-content__sign');
+    sign.innerHTML = 'х/ф "Мой пёс идиот"';
+    let content = document.querySelector('.g-content');
+    content.appendChild(sign);
+
+    let signText = document.querySelector('.g-content__sign');
+    signText.classList.add('fade-in-out-blur');
+}
+
 function startTypedText() {
     let textSelector = '.g-content__text';
     let pictureSelector = '.g-content__picture';
@@ -25,9 +36,10 @@ function startTypedText() {
         fadeOutDelay: 500,
   
         onComplete: (self) => {
-            document.querySelector(pictureSelector).classList.add('fade-in-blur')
             setTimeout(() => {
-                document.querySelector(textSelector).classList.add('fade-out-blur')
+                document.querySelector(textSelector).classList.add('fade-out-blur');
+                document.querySelector(pictureSelector).classList.add('fade-in-blur');
+                addSignature();
             }, 1500)
         }
     });
