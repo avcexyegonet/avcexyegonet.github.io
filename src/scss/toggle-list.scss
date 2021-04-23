@@ -1,0 +1,54 @@
+.toggle-list {
+
+    &__item {
+        margin-bottom: 12px;
+        border-radius: 20px;
+        background-color: rgba($color-white, .2);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .head {
+            padding: 24px 50px 24px 16px;
+            font-weight: 700;
+            position: relative;
+            transition: color .3s ease;
+
+            &__icon {
+                content: "";
+                position: absolute;
+                top: calc(50% - 4px);
+                right: 25px;
+                width: 13px;
+                height: 7px; 
+                transition: all .3s ease-out;
+            }
+        }
+
+        .content {
+            margin-top: -8px;
+            position: relative;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding: 0 16px;
+            transition: max-height .3s ease, opacity .3s ease;
+        }
+
+        &.is-open {
+            color: $color-black;
+            background-color: $color-white;
+
+            .head__icon {
+                    stroke: $color-black;
+                    transform: rotate(-180deg);
+            }
+
+            .content {
+                opacity: 1;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

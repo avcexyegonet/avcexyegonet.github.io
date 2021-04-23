@@ -1,0 +1,13 @@
+.footer {
+
+    &__row {
+        padding: 22px 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+
+        .button:not(.button_circle) {
+            flex-grow: 1;
+        }
+    }
+}

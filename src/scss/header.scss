@@ -1,0 +1,38 @@
+.header {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        display: block;
+        margin-right: 16px;
+        width: 25px;
+        height: 37px;
+        background: url(../images/yota-logo.svg) no-repeat center;
+    }
+
+    &__nav {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        span {
+            flex: 1;
+            height: 3px;
+            position: relative;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,.3);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 4px;
+                background: $color-white;
+            }
+        }
+    }
+}

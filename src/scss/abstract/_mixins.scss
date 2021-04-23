@@ -1,5 +1,0 @@
-@mixin bgText($path) {
-    background: url(#{$path})no-repeat center / cover;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}

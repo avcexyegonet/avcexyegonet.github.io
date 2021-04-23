@@ -1,0 +1,17 @@
+.label {
+
+    &_button {
+        display: block;
+
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+
+            &:checked + .button_label {
+                background-color: $color-white;
+                color: $color-cian;
+            }
+        }
+    }
+}

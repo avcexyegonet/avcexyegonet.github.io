@@ -1,44 +1,22 @@
-@use 'abstract' as *;
-@use 'form';
-@use 'content';
+@import "~normalize.css";
+@import '~swiper/swiper-bundle.css';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    min-width: 320px;
-    font-family: "JB-Reg";
-
-    &.theme-grey {
-        color: $color-grey;
-
-        ::selection {
-            background: $color-grey;
-            color: $color-grey-light;
-        }
-    }
-
-    &.theme-deep-blue {
-        color: $color-white;
-        user-select: none;
-
-        ::selection {
-            background: $color-deep-blue;
-            color: $color-white;
-        }
-    }
-}
-
-h1 {
-    margin-top: 0;
-}
-
-@media all and(max-width: 767px) {
-    h1 {
-        font-size: 32px;
-    }
-}
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "base";
+@import "button";
+@import "page";
+@import "header";
+@import "container";
+@import "footer";
+@import "link";
+@import "slide";
+@import "device";
+@import "steps";
+@import "benefit";
+@import "toggle-list";
+@import "models";
+@import "label";
+@import "tumbler";
+@import "options";

@@ -1,0 +1,49 @@
+.tumbler {
+    position: relative;
+    min-height: 24px;
+    padding-left: 36px;
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background 0.25s ease-out;
+        cursor: pointer;
+        width: 36px;
+        height: 24px;
+        border-radius: 20px;
+        border: none;
+        background: $color-white;
+        box-shadow: inset 2px 2px 4px rgba(39, 69, 112, .1);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            opacity: 1;
+            visibility: visible;
+            transition: all .25s ease-out;
+            background: #00A8E7;
+            box-shadow: 1px 2px 6px rgba(175, 175, 175, .4);
+        }
+
+        &:checked {
+            background: #00A8E7;
+            
+            &::after {
+                left: 15px;
+                background: $color-white;
+            }
+        }
+    }
+
+    &__text {
+        margin-left: 6px;
+        font-family: $fontBold;
+        font-size: 14px;
+    }
+}

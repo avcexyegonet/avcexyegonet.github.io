@@ -1,0 +1,44 @@
+.slide {
+
+    &_center {
+        align-self: center;
+        text-align: center;
+    }
+
+    &__content {
+        padding: 0 25px 0 36px;
+
+        &_wide {
+            padding: 0 25px;
+
+            .slide__title {
+                margin-left: 9px;
+                margin-right: 9px;
+            }
+        }
+
+        &_full {
+            padding: 0;
+
+            .slide__title {
+                margin-left: 36px;
+                margin-right: 36px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 30px;
+        line-height: 36px;
+
+        &_big {
+            font-size: 36px;
+            line-height: 40px;;
+        }
+    }
+
+    &__desc {
+        font-size: 21px;
+    }
+}

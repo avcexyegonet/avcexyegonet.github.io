@@ -1,0 +1,19 @@
+.benefit {
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 140px;
+        min-height: 140px;
+        border-radius: 50%;
+        font-size: 14px;
+        line-height: 18px;
+        background: rgba($color-white, 0.3);
+
+        &_big {
+            min-width: 160px;
+            min-height: 160px;
+        }
+    }
+}

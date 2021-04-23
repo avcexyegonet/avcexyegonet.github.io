@@ -1,0 +1,18 @@
+.steps {
+    max-width: 325px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 28px;
+    text-align: center;
+    font-family: $fontBold;
+
+    li {
+        padding: 34px 41px;
+        margin-bottom: 12px;
+        background: url(../images/step-bg.svg)no-repeat center / cover;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

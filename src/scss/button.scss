@@ -1,0 +1,40 @@
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.button {
+    padding: 21px 27px;
+    border-radius: 60px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $fontBold;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $color-white;
+    transition: color .3s ease-out, background-color .3s ease-out;
+
+    &_circle {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        border-radius: 50%;
+        background-image: url(../images/arrow-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &_label {
+        display: block;
+        text-transform: none;
+        font-size: 16px;
+        background-color: rgba($color-white, .2);
+    }
+
+    &__text {
+        background: linear-gradient(to right, #10aeee 0%, #6482fd 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

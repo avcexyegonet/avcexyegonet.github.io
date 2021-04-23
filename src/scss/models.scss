@@ -1,0 +1,11 @@
+.models {
+    padding-top: 24px;
+
+    .label {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
