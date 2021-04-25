@@ -1,8 +1,6 @@
 .page {
-    max-width: 375px;
     margin: 0 auto;
-
-    min-height: 100vh;
+    min-height: calc(100 * var(--vh));
     display: flex;
     flex-direction: column;
 }

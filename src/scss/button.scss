@@ -13,6 +13,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     background-color: $color-white;
+    cursor: pointer;
     transition: color .3s ease-out, background-color .3s ease-out;
 
     &_circle {
@@ -36,5 +37,13 @@ button {
         background: linear-gradient(to right, #10aeee 0%, #6482fd 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    &:disabled {
+        background-color: $color-cian-dark;
+
+        .button__text {
+            -webkit-text-fill-color: $color-cian;
+        }
     }
 }

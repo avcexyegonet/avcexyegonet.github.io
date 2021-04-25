@@ -1,13 +1,41 @@
 .footer {
 
-    &__row {
-        padding: 22px 30px;
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
 
-        .button:not(.button_circle) {
-            flex-grow: 1;
+    &__row {
+        padding: 30px 22px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &_center {
+            justify-content: center;
+        }
+    }
+
+    &__order {
+        flex-grow: 1;
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    &__next {
+        margin-left: 12px;
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    &__link {
+        margin: 0 auto;
+        display: none;
+
+        &.is-active {
+            display: inline;
         }
     }
 }

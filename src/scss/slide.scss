@@ -7,9 +7,10 @@
 
     &__content {
         padding: 0 25px 0 36px;
+        overflow: hidden;
 
         &_wide {
-            padding: 0 25px;
+            padding: 0 20px;
 
             .slide__title {
                 margin-left: 9px;
@@ -34,7 +35,8 @@
 
         &_big {
             font-size: 36px;
-            line-height: 40px;;
+            line-height: 40px;
+            text-align: center;
         }
     }
 

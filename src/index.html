@@ -13,10 +13,10 @@
         <header class="header">
             <a href="javascript:void(0)" class="header__logo"></a>
             <div class="header__nav" id="headerNav">
-                <span data-group="1"></span>
-                <span data-group="2"></span>
-                <span data-group="3"></span>
-                <span data-group="4"></span>
+                <div data-group="1"><span class="header__nav-bar"></span></div>
+                <div data-group="2"><span class="header__nav-bar"></span></div>
+                <div data-group="3"><span class="header__nav-bar"></span></div>
+                <div data-group="4"><span class="header__nav-bar"></span></div>
             </div>
         </header>
 
@@ -43,7 +43,7 @@
                                 несколько слотов в&nbsp;телефоне.</p>
                         </div>
                     </div>
-                    <div class="swiper-slide slide" data-group="2">
+                    <div class="swiper-slide slide" data-group="1">
                         <div class="slide__content">
                             <h3 class="slide__title">Гарантия безопасности </h3>
                             <p class="slide__desc">eSIM встроена в&nbsp;устройство, поэтому при потере или краже можно
@@ -56,44 +56,32 @@
                             <div class="device-list">
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_watch"></div>
                                 </div>
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle-2.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_phone"></div>
                                 </div>
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle-3.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_lap"></div>
                                 </div>
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle-4.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_tablet"></div>
                                 </div>
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_watch"></div>
                                 </div>
                                 <div class="device">
                                     <div class="device__bg device__bg_back"></div>
-                                    <div class="device__bg device__bg_front">
-                                        <img src="./images/Squircle-2.png" alt="" />
-                                    </div>
+                                    <div class="device__bg device__bg_front device__bg_watch"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide slide" data-group="3">
+                    <div class="swiper-slide slide" data-group="2">
                         <div class="slide__content slide__content_wide">
                             <h3 class="slide__title">Подключите eSIM за&nbsp;три шага</h3>
                             <ul class="steps">
@@ -126,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide slide"  data-group="4">
+                    <div class="swiper-slide slide" data-group="3">
                         <div class="slide__content slide__content_wide">
                             <h3 class="slide__title">Давайте уточним</h3>
                             <div class="toggle-list">
@@ -198,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide slide"  data-group="4">
+                    <div class="swiper-slide slide" data-group="4" data-disabled-next="true">
                         <div class="slide__content slide__content_wide">
                             <h3 class="slide__title">Выберите модель своего смартфона</h3>
                             <div class="models">
@@ -221,59 +209,140 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide slide" data-group="1">
+                    <div class="swiper-slide slide" data-group="4">
                         <div class="slide__content slide__content_full">
                             <h3 class="slide__title">Собери свою Yota</h3>
-                            <div class="options">
-                                <div class="tumbler">
-                                    <input type="checkbox" id="diu76" class="tumbler__input" name="" value="">
-                                    <label for="diu76" class="tumbler__text">Безлимитный интернет</span>
+                            <div class="options" id="options">
+                                <div class="options__result">
+                                    <div class="options__result-num">440,00</div>
+                                    <div class="options__result-title">₽ на 30 дней</div>
+                                </div>
+                                <div class="options__slider">
+                                    <div class="swiper-container" id="optionsSliderTime">
+                                        <div class="swiper-wrapper"></div>
+                                    </div>
+                                    <div class="swiper-container" id="optionsSliderInt">
+                                        <div class="swiper-wrapper"></div>
+                                    </div>
                                 </div>
 
+                                <div class="tumbler">
+                                    <input type="checkbox" id="optionsCheckbox" class="tumbler__input" name="" value="">
+                                    <label for="optionsCheckbox" class="tumbler__text tumbler__text_bold">Безлимитный
+                                        интернет</span>
+                                </div>
                                 <div class="options__list">
                                     <div class="options__item">
-                                        <label for="opt1" class="options__icon">
-                                            <input type="checkbox" id="opt1" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt1" class="options__wrap">
+                                            <input type="checkbox" id="opt1" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
                                             <span class="options__text">SMS</span>
+                                            <span class="options__icon options__icon_sms"></span>
                                         </label>
-                    
+
                                     </div>
                                     <div class="options__item">
-                                        <label for="opt2" class="options__icon">
-                                            <input type="checkbox" id="opt2" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt2" class="options__wrap">
+                                            <input type="checkbox" id="opt2" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
+                                            <span class="options__text">Видео</span>
+                                            <span class="options__icon options__icon_video"></span>
                                         </label>
-                                        <span class="options__text">Видео</span>
                                     </div>
                                     <div class="options__item">
-                                        <label for="opt3" class="options__icon">
-                                            <input type="checkbox" id="opt3" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt3" class="options__wrap">
+                                            <input type="checkbox" id="opt3" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
+                                            <span class="options__text">Музыка</span>
+                                            <span class="options__icon options__icon_music"></span>
                                         </label>
-                                        <span class="options__text">Музыка</span>
                                     </div>
                                     <div class="options__item">
-                                        <label for="opt4" class="options__icon">
-                                            <input type="checkbox" id="opt4" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt4" class="options__wrap">
+                                            <input type="checkbox" id="opt4" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
+                                            <span class="options__text">Транспорт</span>
+                                            <span class="options__icon options__icon_transport"></span>
                                         </label>
-                                        <span class="options__text">Транспорт</span>
                                     </div>
                                     <div class="options__item">
-                                        <label for="opt5" class="options__icon">
-                                            <input type="checkbox" id="opt5" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt5" class="options__wrap">
+                                            <input type="checkbox" id="opt5" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
+                                            <span class="options__text">Соцсети</span>
+                                            <span class="options__icon options__icon_social"></span>
                                         </label>
-                                        <span class="options__text">Соцсети</span>
                                     </div>
                                     <div class="options__item">
-                                        <label for="opt6" class="options__icon">
-                                            <input type="checkbox" id="opt61" class="options__input" name="" value="">
-                                            <span class="options__label">25P</span>
+                                        <label for="opt6" class="options__wrap">
+                                            <input type="checkbox" id="opt6" data-price="25" class="options__input"
+                                                name="" value="">
+                                            <span class="options__label">25<span>₽</span></span>
+                                            <span class="options__text">Мессенджеры</span>
+                                            <span class="options__icon options__icon_chat"></span>
                                         </label>
-                                        <span class="options__text">Мессенджеры</span>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide" data-group="4" data-disabled-next="true">
+                        <div class="slide__content slide__content_wide">
+                            <h3 class="slide__title slide__title_big">Оформление<br />заказа</h3>
+                            <div class="form">
+                                <div class="form__group form__group_sm">
+                                    <p class="form__label">Ваши контакты</p>
+                                    <div class="form__row">
+                                        <select class="form__select" name="city" id="city">
+                                            <option value="1">Москва</option>
+                                            <option value="2">Москва</option>
+                                            <option value="3">Москва</option>
+                                            <option value="4">Москва</option>
+                                            <option value="5">Москва</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__row">
+                                        <input class="form__input" type="number" placeholder="+ 7" name="phone"
+                                            id="phone" />
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="tumbler tumbler_right">
+                                            <label for="selfNumber" class="tumbler__text">Перейти в Yota со своим
+                                                номером</label>
+                                            <input type="checkbox" id="selfNumber" class="tumbler__input"
+                                                name="selfNumber">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__group form__group_info">
+                                    <p>Перед заказом убедитесь, что ваш смартфон <b>поддерживает технологию E-SIM</b>
+                                    </p>
+                                    <a href="javascript:void(0)" class="link">Доступные устройства</a>
+                                </div>
+                                <div class="form__group form__group_sm form__group_order">
+                                    <p class="form__label">Ваш заказ</p>
+                                    <ul class="order-info">
+                                        <li><span>Подключение E-SIM</span><span>300&nbsp;₽</span></li>
+                                        <li><span>Эти деньги будут зачислены на&nbsp;ваш счет</span></li>
+                                        <li><span>Перенос номера</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="social-info">
+                                <div class="social-info__list">
+                                    <a href="javascript:void(0)" class="social-info__icon social-info__icon_fb"></a>
+                                    <a href="javascript:void(0)" class="social-info__icon social-info__icon_inst"></a>
+                                    <a href="javascript:void(0)" class="social-info__icon social-info__icon_tw"></a>
+                                    <a href="javascript:void(0)" class="social-info__icon social-info__icon_vk"></a>
+                                </div>
+                                <div class="social-info__copyright">
+                                    <p>&copy;&nbsp;Yota, 2008&ndash;2018. Все права защищены.</p>
+                                    <b>12+</b>
                                 </div>
                             </div>
                         </div>
@@ -281,14 +350,14 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <div class="footer">
             <div class="footer__row">
-                <button class="button"><span class="button__text">Оформить заказ</span></button>
-                <button class="button button_circle"></button>
+                <button class="button footer__order"><span class="button__text">Оформить заказ</span></button>
+                <button class="button button_circle footer__next"></button>
+                <a href="javascript:void(0)" class="link footer__link">Устройства, поддерживающие eSIM</a>
             </div>
-
-            <a href="javascript:void(0)" class="link">Устройства, поддерживающие eSIM</a>
         </footer>
     </div>
 </body>
+
 </html>

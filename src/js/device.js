@@ -1,10 +1,9 @@
 function cardRevert(selector) {
-    const cardList = document.querySelectorAll(selector);
+    const cardList = document.querySelectorAll(selector)
+    const activeSelector = 'is-active'
 
     for (let card of cardList) {
-        card.addEventListener('click', () => {
-            card.classList.toggle('is-active');
-        })
+        card.addEventListener('click', () => card.classList.contains(activeSelector) ? false : card.classList.add(activeSelector))
     }
 }
 

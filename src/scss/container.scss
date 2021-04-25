@@ -1,4 +1,10 @@
 .container {
     flex-grow: 1;
+    display: flex;
     padding-top: 20px;
+    
+    .swiper-container,
+    .swiper-wrapper {
+        min-height: 100%;
+    }
 }

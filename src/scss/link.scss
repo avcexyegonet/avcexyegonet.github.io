@@ -13,5 +13,10 @@ a {
         left: 0;
         right: 0;
         border-bottom: 1px dotted $color-white;
+        transition: .15s ease-out;
+    }
+
+    &:hover::after {
+        opacity: 0;
     }
 }

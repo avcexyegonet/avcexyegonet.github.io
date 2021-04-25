@@ -1,7 +1,17 @@
 .tumbler {
+    display: inline-block;
     position: relative;
     min-height: 24px;
     padding-left: 36px;
+
+    &_right {
+        padding: 0 50px 0 0;
+
+        .tumbler__input {
+            left: auto;
+            right: 0;
+        }
+    }
 
     &__input {
         position: absolute;
@@ -14,7 +24,10 @@
         border-radius: 20px;
         border: none;
         background: $color-white;
-        box-shadow: inset 2px 2px 4px rgba(39, 69, 112, .1);
+
+        & + .tumbler__text {
+            margin: 0 0 0 6px;
+        }
 
         &::after {
             content: '';
@@ -32,7 +45,7 @@
         }
 
         &:checked {
-            background: #00A8E7;
+            background: rgba($color-white, .2);
             
             &::after {
                 left: 15px;
@@ -42,8 +55,11 @@
     }
 
     &__text {
-        margin-left: 6px;
-        font-family: $fontBold;
+        margin-right: 6px;
         font-size: 14px;
+
+        &_bold {
+            font-family: $fontBold;
+        }
     }
 }

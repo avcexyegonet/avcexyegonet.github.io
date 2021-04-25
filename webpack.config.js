@@ -4,8 +4,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const ImageMinimizerWebpackPlugin = require('image-minimizer-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -34,7 +32,7 @@ const plugins = () => {
     const basePlugins = [
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, 'src/index.html'),
-            filename: 'index.html',
+            filename: './index.html',
             minify: {
                 collapseWhitespace: isProd
             }
@@ -44,31 +42,6 @@ const plugins = () => {
             filename: `./${filename('css')}`
         })
     ]
-
-    if (isProd) {
-        basePlugins.push(
-            new ImageMinimizerWebpackPlugin({
-                minimizerOptions: {
-                    plugins: [
-                        ['gifsicle', { interlaced: true }],
-                        ['jpegtran', { progressive: true }],
-                        ['optipng', { optimizationLevel: 5 }],
-                        [
-                            'svgo',
-                            {
-                                plugins: [
-                                    {
-                                        removeViewBox: false,
-                                    },
-                                ],
-                            },
-                        ],
-                    ],
-                },
-            }),
-            new BundleAnalyzerPlugin()
-        )
-    }
 
     return basePlugins;
 }
@@ -92,10 +65,6 @@ const jsLoaders = () => {
         options: babelOptions()
     }]
 
-    if (isDev) {
-        loaders.push('eslint-loader')
-    }
-
     return loaders
 }
 
@@ -106,11 +75,6 @@ module.exports = {
         filename: `./${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
         publicPath: ''
-    },
-    resolve: {
-        alias: {
-            '@style': path.resolve(__dirname, 'src/scss')
-        }
     },
     devServer: {
         historyApiFallback: true,
@@ -162,6 +126,10 @@ module.exports = {
             {
                 test: /\.html$/i,
                 loader: 'html-loader',
+                options: {
+                    // Disables attributes processing
+                    sources: false,
+                  },
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -170,7 +138,6 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: `./images/${filename('[ext]')}`,
-                            outputPath: './images',
                         },
                     },
                 ],
